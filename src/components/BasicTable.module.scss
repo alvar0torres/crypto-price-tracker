@@ -1,0 +1,24 @@
+.row {
+  cursor: pointer;
+}
+
+.first-cell {
+  display: flex;
+  align-items: center;
+}
+
+.first-cell__logo {
+  max-height: 2rem;
+  width: auto;
+}
+
+.first-cell__name {
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+.first-cell__symbol {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #808a9d;
+}
