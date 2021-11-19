@@ -18,20 +18,20 @@ https://crypto-api-price-tracker.vercel.app/
 ## Functionalities/Features
 
 * Display a cryptocurrency table with following data:
-      * Name of the cryptocurrency
-      * Price
-      * Price change in the last 24h
-      * Market Cap
+    * Name of the cryptocurrency
+    * Price
+    * Price change in the last 24h
+    * Market Cap
       
 * When clicking in a particular cryptocurrency row, the following is displayed:
-      * Description of the cryptocurrency
-      * Price chart
+    * Description of the cryptocurrency
+    * Price chart
       
 * The price chart can display data from:
-      * Last 24h
-      * Last 30 days
-      * Last 3 months
-      * Last year
+    * Last 24h
+    * Last 30 days
+    * Last 3 months
+    * Last year
 
 * Search Bar for searching cryptocurrencies
    
