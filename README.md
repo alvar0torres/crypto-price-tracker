@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Crypto Price Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It displays cryptocurrency prices and charts in real time thanks to the Coingecko API.
 
-## Available Scripts
+## 🚀 Live Version 🚀
 
-In the project directory, you can run:
+https://crypto-api-price-tracker.vercel.app/
 
-### `yarn start`
+## Technologies used in this project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* JavaScript
+* React
+* React Router
+* Axios
+* Coingecko API -> https://www.coingecko.com/en/api/documentation?
+* React Charts.js -> https://reactchartjs.github.io/react-chartjs-2/#/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Functionalities/Features
 
-### `yarn test`
+* Display a cryptocurrency table with following data:
+      * Name of the cryptocurrency
+      * Price
+      * Price change in the last 24h
+      * Market Cap
+      
+* When clicking in a particular cryptocurrency row, the following is displayed:
+      * Description of the cryptocurrency
+      * Price chart
+      
+* The price chart can display data from:
+      * Last 24h
+      * Last 30 days
+      * Last 3 months
+      * Last year
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Search Bar for searching cryptocurrencies
+   
+* Responsive design
+      
 
-### `yarn build`
+## How to run it locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Download the project folder and open it with your favourite code editor. Visual Studio Code is recommended.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Make sure you have installed node.js and then enter the following commands in the terminal:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm install`
 
-### `yarn eject`
+It will install all the dependencies needed for this project.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `npm run dev`
+It will launch the Next.js development server and the application will start running locally in the browser at http://localhost:3000/
