@@ -8,32 +8,32 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import classes from "./BasicTable.module.scss";
 
-
+import { useNavigate } from "react-router-dom";
 
 function createData(image, name, symbol, price, priceChange, marketcap) {
   return { image, name, symbol, price, priceChange, marketcap };
 }
 
 export default function BasicTable(props) {
+  const rows = [];
+  const navigate = useNavigate();
 
-    const rows = [];
-  
-    props.filteredCoins.map((coin) =>
-      rows.push(
-        createData(
-          coin.image,
-          coin.name,
-          coin.symbol,
-          coin.current_price,
-          coin.price_change_percentage_24h,
-          coin.market_cap
-        )
-      )
-    );
-  
+  props.filteredCoins.map((coin) =>
+    rows.push({
+      id: coin.id,
+      rowData: createData(
+        coin.image,
+        coin.name,
+        coin.symbol,
+        coin.current_price,
+        coin.price_change_percentage_24h,
+        coin.market_cap
+      ),
+    })
+  );
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer className={classes.container} component={Paper}>
       <Table
         sx={{ minWidth: 650, bgcolor: "whitesmoke" }}
         aria-label="simple table"
@@ -65,8 +65,9 @@ export default function BasicTable(props) {
         <TableBody>
           {rows.map((row) => (
             <TableRow
+              onClick={() => navigate(`/coins/${row.id}`)}
               hover
-              key={Math.random() * 1000 + Math.random() * 1000}
+              key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               className={classes.row}
             >
@@ -74,32 +75,32 @@ export default function BasicTable(props) {
                 <div className={classes["first-cell"]}>
                   <img
                     className={classes["first-cell__logo"]}
-                    src={row.image}
+                    src={row.rowData.image}
                     alt="crypto-logo"
                   />
                   <span className={classes["first-cell__name"]}>
-                    {row.name}
+                    {row.rowData.name}
                   </span>
                   <span className={classes["first-cell__symbol"]}>
-                    {row.symbol}
+                    {row.rowData.symbol}
                   </span>
                 </div>
               </TableCell>
               <TableCell align="right">
-                <strong>${row.price.toLocaleString()}</strong>
+                <strong>${row.rowData.price.toLocaleString()}</strong>
               </TableCell>
-              {row.priceChange > 0 && (
+              {row.rowData.priceChange > 0 && (
                 <TableCell sx={{ color: "#11d811" }} align="right">
-                  <strong>{row.priceChange}%</strong>
+                  <strong>{row.rowData.priceChange.toFixed(2)}%</strong>
                 </TableCell>
               )}
-              {row.priceChange < 0 && (
+              {row.rowData.priceChange < 0 && (
                 <TableCell sx={{ color: "#f00606" }} align="right">
-                  <strong>{row.priceChange}%</strong>
+                  <strong>{row.rowData.priceChange.toFixed(2)}%</strong>
                 </TableCell>
               )}
               <TableCell align="right">
-                <strong>${row.marketcap.toLocaleString()}</strong>
+                <strong>${row.rowData.marketcap.toLocaleString()}</strong>
               </TableCell>
             </TableRow>
           ))}
