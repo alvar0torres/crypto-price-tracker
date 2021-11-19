@@ -5,7 +5,7 @@ import { Line } from "react-chartjs-2";
 import classes from "./LineChart.module.scss";
 
 
-const LineChart = ({ id, coin }) => {
+const LineChart = ({ id }) => {
   const [historicData, setHistoricData] = useState();
   const [days, setDays] = useState(1);
   const currency = "usd";
@@ -20,7 +20,7 @@ const LineChart = ({ id, coin }) => {
         console.log(res.data.prices);
       })
       .catch((error) => alert("Something went wrong"));
-  }, [days]);
+  }, [days, id]);
 
 
   const changeTimeRangeHandler = (time) => {

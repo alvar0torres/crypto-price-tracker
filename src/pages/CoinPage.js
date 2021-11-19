@@ -30,7 +30,7 @@ const CoinPage = () => {
         setIsLoading(false);
       })
       .catch((error) => alert("Something went wrong"));
-  }, []);
+  }, [id]);
 
   return (
     <section className={classes["page-section"]}>
@@ -38,7 +38,7 @@ const CoinPage = () => {
       {isLoading && <CircularProgress className={classes.spinner} color="success" />}
       {!isLoading && <section className={classes["content-section"]}>
         <div className={classes["image-container"]}>
-          <img src={image} />
+          <img src={image} alt="crypto-logo"/>
         </div>
         <h1>{name}</h1>
         <div className={classes.description}>

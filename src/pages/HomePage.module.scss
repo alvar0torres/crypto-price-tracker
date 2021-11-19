@@ -6,25 +6,26 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
 }
 
 
 .content-section {
   padding-top: 2rem;
   color: white;
-  text-align: center;
-  max-width: 40%;
-  margin: 0 auto;
+  max-width: 60%;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
-  justify-content: center;
+  justify-self: center;
+  
   font-family: "ZCOOL QingKe HuangYou";
 
-  @media (max-width: 40rem){
-    max-width: 95%;
+  @media (max-width: 70rem){
+    max-width: 97%;
     padding-top: 0;
   }
+
   
   .search {
     margin: 2rem auto;

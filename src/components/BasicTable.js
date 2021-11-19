@@ -35,7 +35,7 @@ export default function BasicTable(props) {
   return (
     <TableContainer className={classes.container} component={Paper}>
       <Table
-        sx={{ minWidth: 650, bgcolor: "whitesmoke" }}
+        sx={{ bgcolor: "whitesmoke" }}
         aria-label="simple table"
       >
         <TableHead className={classes.tableHead} sx={{ bgcolor: "white" }}>

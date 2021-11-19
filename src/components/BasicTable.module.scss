@@ -1,8 +1,12 @@
-container {
-  width: 100%;
+.container {
+  min-width: 800px;
 
-  @media (max-width: 40rem) {
-    max-width: 40rem;
+  @media (max-width: 88rem) {
+    min-width: 500px;
+  }
+
+  @media (max-width: 70rem) {
+    min-width: 0;
   }
 }
 

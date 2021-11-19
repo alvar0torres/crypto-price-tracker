@@ -7,7 +7,7 @@ import classes from "./index.module.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App className={classes}/>
   </React.StrictMode>,
   document.getElementById("root")
 );
