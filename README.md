@@ -42,9 +42,9 @@ https://crypto-api-price-tracker.vercel.app/
 
 In terminal:
 
-### `npm install` or ### `yarn install`
+### `npm install` or `yarn install`
 
 It will install all the dependencies needed for this project.
 
-### `npm start` or  ### `yarn start`
+### `npm start` or `yarn start`
 It will launch the React development server and the application will start running locally in the browser at http://localhost:3000/
